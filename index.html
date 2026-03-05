@@ -12,15 +12,17 @@
     <h1>Aula Cripto - Exploração Digital</h1>
 
     <div>
-        <input type="text"> 
-        <button onclick="fazAlgo()">CIFRAR</button>
+        <input id="txtEntrada" type="text"> 
+        <button onclick="cifrar()">CIFRAR</button>
         <span>Resposta:</span>
+        <span id="resp1"></span>
     </div>
     <hr>
     <div>
-        <input type="text"> 
-        <button>DECIFRAR</button>
+        <input id="txtSaida" type="text"> 
+        <button onclick="decifrar()">DECIFRAR</button>
         <span>Resposta:</span>
+        <span id="resp2"></span>
     </div>
 
     <script src="./main.js"></script>
