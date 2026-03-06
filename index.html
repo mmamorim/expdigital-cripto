@@ -1,33 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Aula Cripto</title>
 </head>
-
 <body>
 
     <h1>Aula Cripto - Exploração Digital</h1>
 
     <div>
         <input id="txtEntrada" type="text"> 
-        <button onclick="cifrar()">CIFRAR</button>
-        <button onclick="acaoCifrarCesar()">CIFRAR CESAR</button>
+        <button id="btnCifrar">CIFRAR</button>
+        <button id="btnCifrarCesar">CIFRAR CESAR</button>
         <span>Resposta:</span>
         <span id="resp1"></span>
     </div>
     <hr>
     <div>
         <input id="txtSaida" type="text"> 
-        <button onclick="decifrar()">DECIFRAR</button>
-        <button onclick="acaoDecifrarCesar()">DECIFRAR CESAR</button>
+        <button id="btnDecifrar">DECIFRAR</button>
+        <button id="btnDecifrarCesar">DECIFRAR CESAR</button>
         <span>Resposta:</span>
         <span id="resp2"></span>
     </div>
 
-    <script src="./main.js"></script>
+    <script src="./main.js" type="module"></script>
 
 </body>
 
