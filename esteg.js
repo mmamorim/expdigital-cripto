@@ -22,7 +22,36 @@ function codifica_esteg(textoVisivel, mensagem) {
             textoVisivel = textoVisivel + '\u202c'
         }
     }
-    return textoVisivel + "*"
+    return textoVisivel
 }
 
-export { codifica_esteg }
+function decodifica_esteg(texto) {
+    let codigoBin = ""
+    for(let i=0; i < texto.length; i++) {
+        let letra = texto.charAt(i)
+        if(letra == '\u202d') {
+            codigoBin = codigoBin + "0"
+        }
+        if(letra == '\u202c') {
+            codigoBin = codigoBin + "1"
+        }
+    }
+    console.log(codigoBin);
+    let qtde = 0
+    let byte = ""
+    let saida = ""
+    for(let i=0; i < codigoBin.length; i++) {
+        qtde++
+        byte = byte + codigoBin.charAt(i)
+        if(qtde == 8) {
+            console.log(byte);
+            let codASCII = parseInt(byte,2)
+            saida = saida + String.fromCharCode(codASCII)
+            qtde=0
+            byte = ""            
+        }
+    }
+    return saida
+}
+
+export { codifica_esteg, decodifica_esteg }
