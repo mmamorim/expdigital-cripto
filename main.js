@@ -46,18 +46,9 @@ document.getElementById("btnDecifrarVinagere").onclick = () => {
 document.getElementById("btnEsteg").onclick = () => {
     console.log("clicou btnEsteg");
 
-    let mensagem = prompt("Digite a mensagem escondida:")
-    let texto = getEntrada()
-    let resp = codifica_esteg(texto,mensagem)
-    console.log(resp);
-    setCodificado(resp)
 } 
 
 document.getElementById("btnEstegDecode").onclick = () => {
     console.log("clicou btnEstegDecode");
 
-    let texto = getEntradaCodificado()
-    console.log(texto);
-    let saida = decodifica_esteg(texto)
-    setSaidaDecodificado(saida)
 }
