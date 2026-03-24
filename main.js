@@ -45,10 +45,16 @@ document.getElementById("btnDecifrarVinagere").onclick = () => {
 
 document.getElementById("btnEsteg").onclick = () => {
     console.log("clicou btnEsteg");
-
+    let mensagem = prompt("Digite a mensagem:")
+    let texto = getEntrada()
+    let binario = codifica_esteg(texto,mensagem)
+    setCodificado(binario)
 } 
 
 document.getElementById("btnEstegDecode").onclick = () => {
     console.log("clicou btnEstegDecode");
-
+    let texto = getEntradaCodificado()
+    let mensagem = decodifica_esteg(texto)
+    setSaidaDecodificado(mensagem)
 }
+
